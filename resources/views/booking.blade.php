@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Waterboom Sukahaji</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -59,10 +59,12 @@
                                         @endforeach
                                     </select>
                                 </div>
+
                                 <div class="form-group mb-2">
                                     <label for="time_from">{{ __('Jam Mulai') }}</label>
                                     <input type="text" class="form-control datetimepicker" id="time_from" name="time_from" value="{{ old('time_from') }}" />
                                 </div>
+
                                 <div class="form-group mb-2">
                                     <label for="time_to">{{ __('Jam Berakhir') }}</label>
                                     <input type="text" class="form-control datetimepicker" id="time_to" name="time_to" value="{{ old('time_to') }}" />
@@ -90,8 +92,8 @@
                     previous: 'fas fa-chevron-left',
                     next: 'fas fa-chevron-right'
                 },
+                // minDate: moment()
                 stepping: 10
-                minDate: moment() 
             });
         </script>
     </body>

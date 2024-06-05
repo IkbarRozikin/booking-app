@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Booking Tiket</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
     </head>
     <body class="antialiased">
     <nav class="navbar navbar-light bg-primary d-flex justify-content-center">
-        <a class="navbar-brand text-white" href="/">Booking Futsal</a>
+        <a class="navbar-brand text-white" href="/">Booking Tiket</a>
     </nav>
       <div class="container my-5">
 
@@ -44,11 +44,12 @@
                         <div class="card-header">
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h1 class="h3 mb-0 text-gray-800">{{ __('Upload bukti pembayaran') }}</h1>
+                                <h1 class="h3 mb-0 text-gray-800">{{ __('no rekening : 123456789') }}</h1>
                                 <span class="badge badge-info">Batas Pembayaran {{ \Carbon\Carbon::parse($paymentDue)->format('j F, Y, H:i:s') }}</span>
                             </div>
                         </div>
                         <div class="card-body"> 
-                            <a href=" https://api.whatsapp.com/send?phone=6281234567090&text=Nama,nomer lapangan berikut bukti pembayaran" class="btn btn-success btn-block">{{ __('Kirim bukti perbayaran') }}</a>
+                            <a href=" https://api.whatsapp.com/send?phone=6285352506663&text=Nama,nomer lapangan berikut bukti pembayaran" class="btn btn-success btn-block">{{ __('Kirim bukti perbayaran') }}</a>
                         </div>
                     </div>
                 </div>

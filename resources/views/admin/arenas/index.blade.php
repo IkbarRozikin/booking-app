@@ -51,7 +51,7 @@
                                 <td>
                                     @if($arena->photo)
                                         <a href="{{ $arena->photo->getUrl() }}" target="_blank">
-                                            <img src="{{ $arena->photo->getUrl() }}" width="50px" height="50px">
+                                            <img src="{{ $arena->photo->getUrl() }}" width="100px" height="100px">
                                         </a>
                                     @endif
                                 </td>

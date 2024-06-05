@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Booking Tiket</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
     <body class="antialiased">
         <nav class="navbar navbar-expand-lg navbar-light bg-primary text-white">
             <div class="container">
-                <a class="navbar-brand text-white" href="#">Booking Futsal</a>
+                <a class="navbar-brand text-white" href="#">Waterboom Sukahaji</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
