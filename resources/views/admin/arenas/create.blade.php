@@ -73,7 +73,7 @@
 <script>
     Dropzone.options.photoDropzone = {
         url: "{{ route('admin.arenas.storeMedia') }}",
-        maxFilesize: 2, // MB
+        maxFilesize: 10, // MB
         acceptedFiles: '.jpeg,.jpg,.png,.gif',
         maxFiles: 1,
         addRemoveLinks: true,

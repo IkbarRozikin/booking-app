@@ -43,7 +43,10 @@ class ArenaController extends Controller
     {
         $arena = Arena::create($request->validated());
         
+        // dd($request);
+
         if ($request->input('photo', false)) {
+            
             $arena->addMedia(storage_path('tmp/uploads/' . $request->input('photo')))->toMediaCollection('photo');
         }
 

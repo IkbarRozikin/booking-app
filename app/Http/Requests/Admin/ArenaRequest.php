@@ -24,7 +24,7 @@ class ArenaRequest extends FormRequest
     public function rules()
     {
         return [
-            'number' => 'required|numeric',
+            'number' => 'required|string',
             'price' => 'required|numeric',
             'status' => 'required'
         ];

@@ -23,7 +23,7 @@ class BookingController extends Controller
         ],
     ];
 
-    public function index(Request $request){
+    public function index(Request $request) {
 
         $bookings = [];
         $arenas = Arena::where('status',1)->get();
@@ -55,7 +55,7 @@ class BookingController extends Controller
         return view('welcome', compact('arenas', 'bookings'));
     }
 
-    public function booking(Request $request){
+    public function booking(Request $request) {
 
         $arenas = Arena::where('status', 1)->get();
         $arenaNumber = $request->get('number');
@@ -66,8 +66,6 @@ class BookingController extends Controller
     public function store(BookingRequest $request) {
         $arena = Arena::findOrFail($request->arena_id);
 
-        
-
         $orderDate = date('Y-m-d H:i:s');
         $paymentDue = (new \DateTime($orderDate))->modify('+1 hour')->format('Y-m-d H:i:s');
 
@@ -77,13 +75,13 @@ class BookingController extends Controller
             'status' => !isset($request->status) ? 0 : $request->status
         ]);
 
-        return redirect()->route('booking.success', [$paymentDue])->with([
+        return redirect()->route('booking.success', [$paymentDue, $arena->price])->with([
             'message' => 'Terimakasih sudah booking, Silahkan upload bukti pembayaran !',
             'alert-type' => 'success'
         ]);
     }
 
-    public function success($paymentDue){
-        return view('success', compact('paymentDue'));
+    public function success($paymentDue, $price) {
+        return view('success', compact('paymentDue', 'price'));
     }
 }

@@ -69,6 +69,16 @@
                                     <label for="time_to">{{ __('Jam Berakhir') }}</label>
                                     <input type="text" class="form-control datetimepicker" id="time_to" name="time_to" value="{{ old('time_to') }}" />
                                 </div>
+
+                                <div class="form-group mb-2">
+                                    <label for="number">{{ __('Jumlah Orang') }}</label>
+                                    <select name="number" id="number" class="form-control">
+                                        @for ($i = 1; $i <= 100; $i++)
+                                            <option value="{{ $i }}">{{ $i }}</option>
+                                        @endfor
+                                    </select>
+                                </div>
+
                                 <button type="submit" class="btn btn-primary btn-block">{{ __('Booking') }}</button>
                             </form>
                         </div>
@@ -81,20 +91,25 @@
         <script src="https://cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+        
         <script>
-            $('.datetimepicker').datetimepicker({
-                format: 'YYYY-MM-DD HH:mm',
-                locale: 'en',
-                sideBySide: true,
-                icons: {
-                    up: 'fas fa-chevron-up',
-                    down: 'fas fa-chevron-down',
-                    previous: 'fas fa-chevron-left',
-                    next: 'fas fa-chevron-right'
-                },
-                // minDate: moment()
-                stepping: 10
+            $(document).ready(function () {
+                $('.datetimepicker').datetimepicker({
+                    format: 'YYYY-MM-DD HH:mm',
+                    locale: 'en',
+                    sideBySide: true,
+                    icons: {
+                        up: 'fas fa-chevron-up',
+                        down: 'fas fa-chevron-down',
+                        previous: 'fas fa-chevron-left',
+                        next: 'fas fa-chevron-right'
+                    },
+                    stepping: 10,
+                    minDate: moment()
+                });
             });
+        </script>
+
         </script>
     </body>
 

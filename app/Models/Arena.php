@@ -23,7 +23,7 @@ class Arena extends Model implements HasMedia
         $file = $this->getMedia('photo')->last();
 
         if ($file) {
-            $file->url       = $file->getUrl();
+            $file->url = $file->getUrl();
         }
 
         return $file;
